@@ -1,0 +1,6 @@
+0000000000000000000000000000000000000000 f64c802f702ef3606970b8d03db1516ab686b750 admin <admin@caritor.oracle.com> 1545283941 +0530	commit (initial): init code
+f64c802f702ef3606970b8d03db1516ab686b750 77e758390c1ded58529e38c9b77d34f99be6a544 admin <admin@caritor.oracle.com> 1545299790 +0530	pull: Fast-forward
+77e758390c1ded58529e38c9b77d34f99be6a544 70645fe650e7a1103826d8ddfdb15c1e933ac09a admin <admin@caritor.oracle.com> 1545903943 +0530	commit: master module template setup
+70645fe650e7a1103826d8ddfdb15c1e933ac09a 9958247c8906941400cd47c8c364f6d1235f3a7a admin <admin@caritor.oracle.com> 1545904212 +0530	commit (merge): conflict solved
+9958247c8906941400cd47c8c364f6d1235f3a7a d1d4ee053c263d8548cfd0796e34337fdd1ba14c admin <admin@caritor.oracle.com> 1545905604 +0530	commit: login loader hide
+d1d4ee053c263d8548cfd0796e34337fdd1ba14c b220d68d094b40e42e03dc1576430ce4e3601046 admin <admin@caritor.oracle.com> 1545905714 +0530	commit (merge): conflict solved

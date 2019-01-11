@@ -1,0 +1,234 @@
+<!--/.row-->
+<div class="row">
+  <div class="col-md-10">
+    <div class="card">
+      <div class="card-header">
+        <strong>Customer Master12</strong>
+      </div>
+      <div class="card-body">
+        <form #c="ngForm" (ngSubmit)="customer(c)" class="form-horizontal">
+
+          <hr class="hr-text" data-content="Account Information">
+
+          <div class="form-group row">
+            <label class="col-md-1 col-form-label" for="Salutation">Salutation</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" [(ngModel)]="salutation" name="salutation" placeholder="Enter your Salutation">
+            </div>
+            <label class="col-md-1 col-form-label" for="Name">Name</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="Name">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-1 col-form-label" for="Owner">Owner</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="owner" [(ngModel)]="owner" placeholder="Enter your Owner">
+            </div>
+            <label class="col-md-1 col-form-label" for="Code">Code</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="code" [(ngModel)]="code" placeholder="Code">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-1 col-form-label" for="Phone">Phone</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="phone" [(ngModel)]="phone" placeholder="Enter your Phone">
+            </div>
+            <label class="col-md-1 col-form-label" for="Fax">Fax</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="fax" [(ngModel)]="fax" placeholder="Fax">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-1 col-form-label" for="Type">Type</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="type" [(ngModel)]="type" placeholder="Enter your Type">
+            </div>
+
+
+            <label class="col-md-1 col-form-label" for="department">Industry</label>
+            <div class="col-md-5">
+              <!-- [(ngModel)]="department" -->
+              <select id="department" name="selectedDepartment"  [(ngModel)]="selectedDepartment" class="form-control">
+                <option *ngFor="let dept of departments" [value]="dept.name">
+                  {{dept.name}}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-1 col-form-label" for="Website">Website</label>
+            <div class="col-md-5">
+              <input Website="text" class="form-control" name="website" [(ngModel)]="website" placeholder="Enter your Website">
+            </div>
+            <label class="col-md-1 col-form-label" for="Gender">Gender</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="gender" [(ngModel)]="gender" placeholder="Gender">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-1 col-form-label" for="Mobile">Mobile</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="mobile" [(ngModel)]="mobile" placeholder="Enter your Mobile">
+            </div>
+            <label class="col-md-1 col-form-label" for="Alternate Mobile">Alternate Mobile</label>
+            <div class="col-md-5">
+              <input type="text" class="form-control" name="alternateMobile" [(ngModel)]="alternateMobile" placeholder="Alternate Mobile">
+            </div>
+          </div>
+
+          <hr class="hr-text" data-content="Address Information">
+          <div class="row">
+            <div class="col-md-6">
+
+              <div class="card">
+                <div class="card-header">
+                  <strong>Billing </strong> Info 6
+                </div>
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Address">Address</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="billingAddress" [(ngModel)]="billingAddress"
+                        placeholder="Address">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Billing Street">Billing Street</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="billingStreet" [(ngModel)]="billingStreet"
+                        placeholder="Billing Street">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="City">City</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="billingCity" [(ngModel)]="billingCity" placeholder="City">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="State">State</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="billingState" [(ngModel)]="billingState"
+                        placeholder="State">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Country">Country</label>
+                    <div class="col-md-9">
+                        <select id="Country" name="selectedCountry"  [(ngModel)]="selectedCountry" class="form-control">
+                            <option *ngFor="let country of countries" [value]="country.name">
+                              {{country.name}}
+                            </option>
+                          </select>
+                    </div>
+                  </div>
+
+
+
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Pincode">Pincode</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="billingPincode" [(ngModel)]="billingPincode"
+                        placeholder="Pincode">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="card">
+                <div class="card-header">
+                  <strong>Shipping </strong> Info 6
+                </div>
+                <div class="card-body">
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Address">Address</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="shippingAddress" [(ngModel)]="shippingAddress"
+                        placeholder="Address">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Shipping Street">Shipping Street</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="shippingStreet" [(ngModel)]="shippingStreet"
+                        placeholder="Shipping Street">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="City">City</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="shippingCity" [(ngModel)]="shippingCity"
+                        placeholder="City">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="State">State</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="shippingState" [(ngModel)]="shippingState"
+                        placeholder="State">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Country">Country</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="shippingCountry" [(ngModel)]="shippingCountry"
+                        placeholder="Country">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                      <label class="col-md-3 col-form-label" for="Country">Country</label>
+                      <div class="col-md-9">
+                          <select id="Country" name="shippingCountry"  [(ngModel)]="selectedShippingCountry" class="form-control">
+                              <option *ngFor="let country of countries" [value]="country.name">
+                                {{country.name}}
+                              </option>
+                            </select>
+                      </div>
+                    </div>
+
+                  <div class="form-group row">
+                    <label class="col-md-3 col-form-label" for="Pincode">Pincode</label>
+                    <div class="col-md-9">
+                      <input type="text" class="form-control" name="shippingPincode" [(ngModel)]="shippingPincode"
+                        placeholder="Pincode">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr class="hr-text" data-content="Description">
+          <div class="form-group row">
+            <label class="col-md-3 col-form-label" for="Description">Description 1</label>
+            <div class="col-md-9">
+              <textarea name="description" [(ngModel)]="description" name="Description" rows="2" class="form-control"
+                placeholder="Content.."></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+
+      </div>
+
+    </div>
+  </div>
+
+  <!--/.col-->
+</div>
+<!--/.row-->

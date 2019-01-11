@@ -1,0 +1,78 @@
+<!-- main app container -->
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <h3>Angular 7 Reactive Form Validation</h3>
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                          <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" formControlName="middleName" class="form-control" [ngClass]="{'is-invalid': submitted && f.middleName.errors}" />
+                    <div *ngIf="submitted && f.middleName.errors" class="invalid-feedback">
+                      <div *ngIf="f.middleName.errors.required">Middle Name is required</div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <button class="btn btn-primary">Register</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+<hr>
+<strong>Tabluar Data</strong>
+<table>
+   <tr>
+     <th>Id</th>
+     <th>Name</th>
+     <th>Salary</th>
+   </tr>
+   <tr *ngFor="let emp of employeeType">
+     <td> {{emp.Id}}</td>
+     <td> {{emp.Name}}</td>
+     <td> {{emp.Salary}}</td>
+   </tr>
+</table>
+<div class="col-lg-8">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> Striped Table
+      </div>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let emp of employeeType">
+                  <td> {{emp.Id}}</td>
+                  <td> {{emp.Name}}</td>
+                  <td class="badge badge-success"> {{emp.Salary}}</td>
+                </tr>
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active">
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>

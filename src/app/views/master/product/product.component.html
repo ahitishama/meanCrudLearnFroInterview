@@ -1,0 +1,131 @@
+<!--/.col-->
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Product</strong>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+      <div class="card-body">
+        <hr class="hr-text" data-content="Product Details">
+        <div class="row">
+          <div class="form-group col-sm-4">
+            <label for="productNumber">Product Number</label>
+            <input type="text" class="form-control" formControlName="productNumber" [ngClass]="{ 'is-invalid': submitted && f.productNumber.errors }" placeholder="Product Number">
+            <div *ngIf="submitted && f.productNumber.errors" class="invalid-feedback">
+              <div *ngIf="f.productNumber.errors.required">Product Number is required</div>
+          </div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="productName">Product  Name</label>
+            <input type="text" class="form-control" formControlName="productName" [ngClass]="{'is-invalid': submitted && f.productName.errors}" placeholder=" Product  Name">
+            <div *ngIf="submitted && f.productName.errors" class="invalid-feedback">
+              <div *ngIf="f.productName.errors.required">Product Name is required</div>
+              <div *ngIf="f.productName.errors.minlength">Product Name must be at least 4 characters</div>
+            </div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="vehicleMake">Vehicle Make</label>
+            <select id="select1" formControlName="vehicleMake" [ngClass]="{'is-invalid': submitted && f.vehicleMake.errors}" class="form-control">
+              <option *ngFor="let make of vahicleMake; let i = index">{{make}}</option>
+            </select>
+            <div *ngIf="submitted && f.vehicleMake.errors" class="invalid-feedback">
+              <div *ngIf="f.vehicleMake.errors.required">Vehicle Name is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-4">
+            <label for="brand">Brand</label>
+            <select id="select1" formControlName="brand" [ngClass]="{'is-invalid': submitted && f.brand.errors}" class="form-control">
+                <option *ngFor="let brand of brands; let i = index">{{brand}}</option>
+
+              </select>
+              <div *ngIf="submitted && f.brand.errors" class="invalid-feedback">
+                <div *ngIf="f.brand.errors.required">Brand Name is required</div>
+              </div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="productCategory">Product Category</label>
+            <select id="select1" formControlName="productCategory" [ngClass]="{'is-invalid': submitted && f.productCategory.errors}" class="form-control">
+                <option *ngFor="let brand of brands; let i = index">{{brand}}</option>
+              </select>
+              <div *ngIf="submitted && f.productCategory.errors" class="invalid-feedback">
+                <div *ngIf="f.productCategory.errors.required">Product Category is required</div>
+              </div>
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="oemNo">OEM No</label>
+            <input type="text" class="form-control"  formControlName="oemNo" [ngClass]="{'is-invalid': submitted && f.oemNo.errors}" placeholder="OEM No">
+            <div *ngIf="submitted && f.oemNo.errors" class="invalid-feedback">
+              <div *ngIf="f.oemNo.errors.required">OEM No is required</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-4">
+                <label for="productGroup">Product Group</label>
+                <select id="select1" formControlName="productGroup" [ngClass]="{'is-invalid': submitted && f.productGroup.errors}" class="form-control">
+                  <option *ngFor="let brand of brands; let i = index">{{brand}}</option>
+                </select>
+                <div *ngIf="submitted && f.productGroup.errors" class="invalid-feedback">
+                  <div *ngIf="f.productGroup.errors.required">Product Group is required</div>
+                </div>
+              </div>
+              <div class="form-group col-sm-4">
+                  <label for="unit">Unit</label>
+                  <input type="text" class="form-control" formControlName="unit" [ngClass]="{'is-invalid': submitted && f.unit.errors}" placeholder="Unit">
+                  <div *ngIf="submitted && f.unit.errors" class="invalid-feedback">
+                    <div *ngIf="f.unit.errors.required">Unit is required</div>
+                  </div>
+                </div>
+          <div class="form-group col-sm-4">
+            <label for="countryOfOrigin">Country of Origin</label>
+            <select id="select1" formControlName="countryOfOrigin" [ngClass]="{'is-invalid': submitted && f.countryOfOrigin.errors}" class="form-control">
+              <option *ngFor="let brand of brands; let i = index">{{brand}}</option>
+            </select>
+            <div *ngIf="submitted && f.countryOfOrigin.errors" class="invalid-feedback">
+              <div *ngIf="f.countryOfOrigin.errors.required">Country of Origin is required</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-12">
+            <label for="remarks">Remarks</label>
+            <textarea name="remarks"formControlName="remarks" [ngClass]="{'is-invalid': submitted && f.remarks.errors}" rows="2" class="form-control" placeholder="Content.."></textarea>
+            <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
+              <div *ngIf="f.remarks.errors.required">Remarks is required</div>
+            </div>
+          </div>
+        </div>
+        <hr class="hr-text" data-content="General">
+        <div class="row">
+
+              <div class="form-group col-sm-4">
+                  <label for="sellingPrice">Selling Price</label>
+                  <input type="text" class="form-control" formControlName="sellingPrice" [ngClass]="{'is-invalid': submitted && f.sellingPrice.errors}"  placeholder="Selling Price">
+                  <div *ngIf="submitted && f.sellingPrice.errors" class="invalid-feedback">
+                    <div *ngIf="f.sellingPrice.errors.required">Selling Price is required</div>
+                  </div>
+                </div>
+
+
+
+            <div class="form-group col-sm-4">
+                <label for="partsLocation">Parts Location</label>
+                <input type="text" class="form-control" formControlName="partsLocation" [ngClass]="{'is-invalid': submitted && f.partsLocation.errors}" placeholder="Parts Location">
+                <div *ngIf="submitted && f.partsLocation.errors" class="invalid-feedback">
+                  <div *ngIf="f.partsLocation.errors.required">Parts Location is required</div>
+                </div>
+              </div>
+
+      </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+        <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--/.col-->

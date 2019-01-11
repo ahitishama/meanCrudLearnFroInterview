@@ -1,0 +1,75 @@
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Create Module</strong>
+    </div>
+    <form class="form-horizontal" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="card-body">
+
+          <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="hf-email">Module Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" placeholder="Enter Module Name.." formControlName="moduleName" >
+                <span class="help-block">Please enter your Module Name</span>
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-md-3 col-form-label" for="hf-email">Module Descripttion</label>
+                <div class="col-md-9">
+                  <textarea formControlName="moduleDescription"  class="form-control" placeholder="Content.."></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                  <label class="col-md-3 col-form-label">Operation</label>
+                  <div class="col-md-9 col-form-label">
+                    <div class="form-check form-check-inline mr-1" *ngFor="let data of operations" >
+                      <input class="form-check-input" type="checkbox" (change)="onChange(data.operation, $event.target.checked)" id="inline-checkbox1" value="option1">
+                      <label class="form-check-label" for="inline-checkbox1">{{data.operation}}</label>
+                    </div>
+                  </div>
+                </div>
+
+        <!-- <div *ngFor="let data of emails">
+          <input type="checkbox" (change)="onChange(data.email, $event.target.checked)"> {{data.email}}<br>
+        </div> -->
+
+
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- <div class="container"><br />
+  <h1>Save Module</h1><br />
+  <form novalidate #c="ngForm" (ngSubmit)="saveModule(c)">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="form-group col-md-4">
+        <label for="moduleName">Module Name:</label>
+        <input type="email" class="form-control" name="moduleName"  [(ngModel)]="moduleName">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="form-group col-md-4">
+        <label for="moduleDescription">Module Description:</label>
+        <input type="text" class="form-control" name="moduleDescription"  [(ngModel)]="moduleDescription">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="form-group col-md-4">
+        <button type="submit" class="btn btn-success">Save</button>
+      </div>
+    </div>
+  </form>
+</div> -->

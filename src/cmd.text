@@ -1,0 +1,11 @@
+npm install --save express
+npm install --save mongodb
+npm install --save mongoose
+npm install --save-dev nodemon
+
+
+npm install jsonwebtoken --save
+// npm install passport --save
+// npm install passport-local --save
+npm install express-jwt --save
+npm install ngx-spinner --save

@@ -1,0 +1,123 @@
+ <!--/.row-->
+ <div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">
+        <i class="fa fa-align-justify"></i> Role Access Permission Screen
+      </div>
+      <div class="card-body">
+          <div class="form-group row">
+              <label class="col-md-2 col-form-label" for="select3">Select Role</label>
+              <div class="col-md-3">
+                  <!-- <select type="number" [(ngModel)]="selectedLevelCustomCompare" [compareWith]="compareFn">
+                      <option *ngFor="let level of levels" [ngValue]="level">{{level.name}}</option>
+                    </select> -->
+                <select type="number" id="select3" name="selectedModule" class="form-control form-control-sm"   [(ngModel)]="selectedRole" >
+                  <option>Please select</option>
+                  <option *ngFor="let level of message" [ngValue]="level" >{{level.roleName}}</option>
+                </select>
+              </div>
+            </div>
+
+        <table class="table table-bordered table-striped table-sm">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Opeartions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Module One</td>
+              <td>   <div class="form-group row">
+                  <div class="col-md-9 col-form-label">
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" type="checkbox" id="inline-checkbox1" value="option1">
+                      <label class="form-check-label" for="inline-checkbox1">Create</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" type="checkbox" id="inline-checkbox2" value="option2">
+                      <label class="form-check-label" for="inline-checkbox2">Delete</label>
+                    </div>
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="option3">
+                      <label class="form-check-label" for="inline-checkbox3">update</label>
+                    </div>
+                  </div>
+                </div></td>
+            </tr>
+            <tr>
+                <td>Module Two</td>
+                <td>   <div class="form-group row">
+                    <div class="col-md-9 col-form-label">
+                      <div class="form-check form-check-inline mr-1">
+                        <input class="form-check-input" type="checkbox" id="inline-checkbox1" value="option1">
+                        <label class="form-check-label" for="inline-checkbox1">Create</label>
+                      </div>
+                      <div class="form-check form-check-inline mr-1">
+                        <input class="form-check-input" type="checkbox" id="inline-checkbox2" value="option2">
+                        <label class="form-check-label" for="inline-checkbox2">Delete</label>
+                      </div>
+                      <div class="form-check form-check-inline mr-1">
+                        <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="option3">
+                        <label class="form-check-label" for="inline-checkbox3">update</label>
+                      </div>
+                      <div class="form-check form-check-inline mr-1">
+                          <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="option3">
+                          <label class="form-check-label" for="inline-checkbox3">View</label>
+                        </div>
+                    </div>
+                  </div></td>
+              </tr>
+              <tr>
+                  <td>Module Three</td>
+                  <td>   <div class="form-group row">
+                      <div class="col-md-9 col-form-label">
+                        <div class="form-check form-check-inline mr-1">
+                          <input class="form-check-input" type="checkbox" id="inline-checkbox1" value="option1">
+                          <label class="form-check-label" for="inline-checkbox1">Create</label>
+                        </div>
+                        <div class="form-check form-check-inline mr-1">
+                          <input class="form-check-input" type="checkbox" id="inline-checkbox2" value="option2">
+                          <label class="form-check-label" for="inline-checkbox2">Delete</label>
+                        </div>
+                        <div class="form-check form-check-inline mr-1">
+                          <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="option3">
+                          <label class="form-check-label" for="inline-checkbox3">update</label>
+                        </div>
+                        <div class="form-check form-check-inline mr-1">
+                            <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="option3">
+                            <label class="form-check-label" for="inline-checkbox3">View</label>
+                          </div>
+                          <div class="form-check form-check-inline mr-1">
+                              <input class="form-check-input" type="checkbox" id="inline-checkbox3" value="option3">
+                              <label class="form-check-label" for="inline-checkbox3">Print</label>
+                            </div>
+                      </div>
+                    </div></td>
+                </tr>
+
+          </tbody>
+          <div>
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+          </div>
+        </table>
+
+        <nav>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!--/.col-->
+</div>
+<!--/.row-->

@@ -1,0 +1,162 @@
+<!--/.col-->
+<div class="col-sm-12">
+  <div class="card">
+    <div class="card-header">
+      <strong>Vehicle Model</strong>
+    </div>
+    <form #vclFrm="ngForm" (ngSubmit)="vehicle(vclFrm)">
+      <div class="card-body">
+        <hr class="hr-text" data-content="Contact Information">
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="country">Country</label>
+            <select id="select1" name="select1" class="form-control">
+                <option value="0">Please select</option>
+                <option value="1">Option #1</option>
+                <option value="2">Option #2</option>
+                <option value="3">Option #3</option>
+              </select>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="plateNo">Plate No</label>
+            <input type="text" class="form-control" name="plateNo" [(ngModel)]="plateNo" placeholder="Enter your Plate No">
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="customer">Customer</label>
+            <select id="select1" name="select1" class="form-control">
+                <option value="0">Please select</option>
+                <option value="1">Option #1</option>
+                <option value="2">Option #2</option>
+                <option value="3">Option #3</option>
+              </select>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="phone">Phone</label>
+            <input type="text" class="form-control" name="phone" [(ngModel)]="phone" placeholder="Enter your Phonne">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="vehicleMake">Vehicle Make</label>
+            <select id="select1" name="select1" class="form-control">
+                <option value="0">Please select</option>
+                <option value="1">Option #1</option>
+                <option value="2">Option #2</option>
+                <option value="3">Option #3</option>
+              </select>
+          </div>
+          <div class="form-group col-sm-6">
+              <label for="vehicleModel">Vehicle Model</label>
+              <select id="select1" name="select1" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Option #1</option>
+                  <option value="2">Option #2</option>
+                  <option value="3">Option #3</option>
+                </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+              <label for="vehicleYearModel">Vehicle Year Model</label>
+              <select id="select1" name="select1" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Option #1</option>
+                  <option value="2">Option #2</option>
+                  <option value="3">Option #3</option>
+                </select>
+          </div>
+          <div class="form-group col-sm-6">
+              <label for="engineType">Engine Type</label>
+              <select id="select1" name="select1" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Option #1</option>
+                  <option value="2">Option #2</option>
+                  <option value="3">Option #3</option>
+                </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-sm-6">
+            <label for="chasisNo">Chasis No</label>
+            <input type="text" class="form-control" name="chasisNo" [(ngModel)]="chasisNo"  placeholder="Enter your Chasis No">
+          </div>
+          <div class="form-group col-sm-6">
+              <label for="engineNo">Engine No</label>
+              <input type="text" class="form-control" name="engineNo" [(ngModel)]="engineNo"  placeholder="Enter your Engine No">
+          </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="form-group col-sm-6">
+              <label for="vehicleType">Vehicle Type</label>
+              <select id="select1" name="select1" class="form-control">
+                  <option value="0">Please select</option>
+                  <option value="1">Option #1</option>
+                  <option value="2">Option #2</option>
+                  <option value="3">Option #3</option>
+                </select>
+            </div>
+            <div class="form-group col-sm-6">
+                <label for="firstRegistrationDate">First Registration Date</label>
+                <input class="form-control" id="date-input" type="date" name="firstRegistrationDate" placeholder="First Registration Date">
+            </div>
+          </div>
+          <div class="row">
+              <div class="form-group col-sm-6">
+                  <label for="vehiclePurchaseDate">Vehicle Purchase Date</label>
+                  <input class="form-control" id="date-input" type="date" name="vehiclePurchaseDate" placeholder="First Registration Date">
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-sm-6">
+                    <label for="warrantyNo">Warranty No</label>
+                    <input type="text" class="form-control" name="warrantyNo" [(ngModel)]="warrantyNo"  placeholder="Enter your Warranty No">
+                </div>
+                <div class="form-group col-sm-6">
+                    <label for="warrantyExpiryDate">Warranty Expiry Date</label>
+                    <input class="form-control" id="date-input" type="date" name="warrantyExpiryDate" placeholder=" Warranty Expiry Date">
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="form-group col-sm-12">
+                    <label for="remarks">Remarks</label>
+                    <textarea name="remarks" [(ngModel)]="remarks" rows="2" class="form-control"
+                    placeholder="Content.."></textarea>
+                </div>
+              </div>
+
+
+            <div class="row">
+              <div class="form-group col-sm-12">
+                  <label for="carClassification">Car Classification</label>
+                  <select id="select1" name="select1" class="form-control">
+                    <option value="0">Please select</option>
+                    <option value="1">Option #1</option>
+                    <option value="2">Option #2</option>
+                    <option value="3">Option #3</option>
+                  </select>
+              </div>
+            </div>
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+        <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--/.col-->
